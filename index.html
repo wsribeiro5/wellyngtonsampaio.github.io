@@ -21,14 +21,14 @@
 </head>
 <body id="container">
   <a style='font-size: small; position: fixed; left: 0; bottom: 0; width: 100%; background-color: black; color: white; text-align: center;' id="owner"
-   href=''>@WellyngtonSampaio_ © 2020 version. 7.0</a>
+   href='https://wsribeiro5.github.io/wellyngtonsampaio.github.io'>@WellyngtonSampaio_ © 2020 version. 7.0</a>
   <div style="text-align: center">
     <span class="img-circle">
       <img id="minhaImagem" style="border-radius: 50%; width:120px; height:120px; z-index: 1;">
     </span>
   </div>
   <div style="width: 100%; text-align: center;">
-    <div id="seuNome"></div>
+    <div id="seuNome"></div>    
     <span id="divRedeSocial"></span>
   </div>
   <br>
@@ -41,6 +41,12 @@
     INICIO DOS DADOS DO COLECIONADOR
     INICIO DOS DADOS DO COLECIONADOR
     INICIO DOS DADOS DO COLECIONADOR
+
+
+    Seu colecionador de link será
+    https://wsribeiro5.github.io/links
+
+    Troque o meu usuário wsribeiro5 pelo seu e pronto
   -->
   <script>
     SeuColecionadorLinks = {
@@ -51,12 +57,12 @@
         corTexto: 'white'
       },
       fundo:{
-        cor: "red",
-        gradiente: '',
+        repetirImagem: 'nao',
         imagem: 'https://i.pinimg.com/originals/af/8d/63/af8d63a477078732b79ff9d9fc60873f.jpg',
-        repetirImagem: 'sim'
+        gradiente: '',
+        cor: "red"
       },      
-      meusBotoes:
+      botoes:
         [
           {
             textoDoBotao: 'Vamos Trabalhar Juntos', linkDoBotao: 'http://tomsampaio.jeunesseglobal.com',
@@ -64,7 +70,7 @@
           },// copie com a virgula no final
 
           {
-            textoDoBotao: 'Vamos Trabalhar Juntos', linkDoBotao: 'http://tomsampaio.jeunesseglobal.com',
+            textoDoBotao: 'Como Criar Seu Colecionador de Links', linkDoBotao: 'https://wsribeiro5.github.io/wellyngtonsampaio.github.io/step1.html',
             corDoBotao: 'yellow', corDaLetra: '', tamanhoDaLetra: '25', dataInicio: '', dataFim: ''
           },// copie com a virgula no final
 
@@ -76,7 +82,12 @@
           {
             textoDoBotao: 'Vamos Trabalhar Juntos', linkDoBotao: 'http://tomsampaio.jeunesseglobal.com',
             corDoBotao: 'yellow', corDaLetra: '', tamanhoDaLetra: '25', dataInicio: '', dataFim: ''
-          },// copie com a virgula no final          
+          },// copie com a virgula no final   
+
+          {
+            textoDoBotao: 'Vamos Trabalhar Juntos', linkDoBotao: 'http://tomsampaio.jeunesseglobal.com',
+            corDoBotao: 'green', corDaLetra: 'white', tamanhoDaLetra: '20', dataInicio: '', dataFim: ''
+          },// copie com a virgula no final       
         ],
       redesSociais:
         [
@@ -97,7 +108,7 @@
           },// copie sempre com a virgula no final
           {
             nome: 'twitter',
-            link: 'https://www.facebook.com/wellyngton.sampaio.1',
+            link: 'https://twitter.com/wsribeiro5',
             imagem: 'https://wsribeiro5.github.io/wellyngtonsampaio.github.io/twitter.png'
           },// copie sempre com a virgula no final
         ]
@@ -124,7 +135,7 @@
         if(document.getElementById("owner")== null){ return false};
         if (item.link != '') {
           if(document.getElementById("owner")== null){ return false};
-          divBotoes.innerHTML = divBotoes.innerHTML + "<img src='" + item.imagem + "' onclick='abrirLink(" + index + ")'></img>";
+          divBotoes.innerHTML = divBotoes.innerHTML + "<img style='width:35px; height:35px; padding-right:10px; border-color: transparent;' src='" + item.imagem + "' onclick='abrirLink(" + index + ")'></img>";
           if(document.getElementById("owner")== null){ return false};
         }
         if(document.getElementById("owner")== null){ return false};
@@ -135,7 +146,7 @@
       if(document.getElementById("owner")== null){ return false};
       let divBotoes = document.getElementById("divBotoes");
       if(document.getElementById("owner")== null){ return false};
-      SeuColecionadorLinks.meusBotoes.forEach((item, index) => {
+      SeuColecionadorLinks.botoes.forEach((item, index) => {
         if(document.getElementById("owner")== null){ return false};
         if (item.textoDoBotao != '') {
           if(document.getElementById("owner")== null){ return false};
@@ -182,9 +193,9 @@
     }    
     function abrirLinkBotao(i) {
       if(document.getElementById("owner")== null){ return false};
-      if (SeuColecionadorLinks.meusBotoes[i].linkDoBotao != '') {
+      if (SeuColecionadorLinks.botoes[i].linkDoBotao != '') {
         if(document.getElementById("owner")== null){ return false};
-        window.location.href = SeuColecionadorLinks.meusBotoes[i].linkDoBotao;
+        window.location.href = SeuColecionadorLinks.botoes[i].linkDoBotao;
         if(document.getElementById("owner")== null){ return false};
       }
       if(document.getElementById("owner")== null){ return false};
@@ -208,7 +219,7 @@
         if(document.getElementById("owner")== null){ return false};
         if (SeuColecionadorLinks.fundo.repetirImagem == 'nao') {
           if(document.getElementById("owner")== null){ return false};
-          bg = 'background-repeat: no-repeat; background-image: url(' + SeuColecionadorLinks.fundo.imagem + '); background-color: white';
+          bg = 'background-repeat: no-repeat; background-image: url(' + SeuColecionadorLinks.fundo.imagem + '); background-color: white; background-position: top center;';
           if(document.getElementById("owner")== null){ return false};
         } else {
           if(document.getElementById("owner")== null){ return false};
@@ -217,7 +228,7 @@
         }
         if(document.getElementById("owner")== null){ return false};
         document.getElementById('container').style = bg;
-        if(document.getElementById("owner")== null){ return false};
+        if(document.getElementById("owner")== null){ return false}
         return;
       }
       if(document.getElementById("owner")== null){ return false};
@@ -228,9 +239,9 @@
         return;
       }
       if(document.getElementById("owner")== null){ return false};
-      if (SeuColecionadorLinks.fundo.gradiente != '') {
+      if (SeuColecionadorLinks.fundo.cor != '') {
         if(document.getElementById("owner")== null){ return false};
-        document.getElementById('container').style = SeuColecionadorLinks.fundo.gradiente.substr(0, SeuColecionadorLinks.fundo.gradiente.length-1) + " fixed";
+        document.getElementById('container').style = 'background-color: '+ fundo.cor;
         if(document.getElementById("owner")== null){ return false};
         return;
       }
